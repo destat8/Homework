@@ -1,0 +1,67 @@
+/*************************************************************************
+                     Ali Maen Naser Alkabariti 
+**************************************************************************/
+
+#include <stdio.h>
+
+int SALARY (void)
+{ 
+	int code;
+	float total = 0;
+	float pay, sales, hours;
+
+	printf ("\nEnter employee's number code (-1 to end): ");
+	scanf ("%d", &code);
+
+	while (code != -1)
+	{
+		switch (code)
+		{
+			case 1:  
+				printf ("Enter the manager's pay rate: ");
+				scanf ("%f", &pay);
+
+				printf ("Weekly pay is: %.2f\n\n", pay);
+				
+				total += pay;
+
+				break;
+
+			case 2: 
+				pay = 10
+
+				printf ("Enter the number of hours worked: ");
+				scanf ("%f", &hours);
+
+		        pay = pay * hours;
+      
+				printf ("Weekly pay is: %.2f\n\n", pay);
+
+				total += pay;
+
+				break;
+
+			case 3: 
+				printf ("Enter commission employee's gross weekly sales: ");
+				scanf ("%f", &sales);
+
+				pay = 250 + (.057 * sales);
+				
+				printf ("Weekly pay is: %.2f\n\n", pay);
+
+				total += pay;
+
+				break;
+
+			default: 
+				printf ("You have entered an invalid code.\n");
+		}
+
+		printf ("\nEnter employee's number code (-1 to end): ");
+		scanf ("%d", &code);
+	}
+
+	printf ("\nThe total payroll for the week is: %.2f\n", total);
+
+	return 0;
+}
